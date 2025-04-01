@@ -1,0 +1,201 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+}
+
+main {
+  padding-block: 3.75rem;
+  padding-inline: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3.75rem;
+}
+
+.title-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.title-light {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  font-style: normal;
+  font-size: 2.25rem;
+  line-height: 140%;
+  letter-spacing: 0.015625rem;
+  font-size: 1.5rem;
+  color: hsl(234, 12%, 34%);
+}
+
+.title-heavy {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 2.25rem;
+  line-height: 140%;
+  letter-spacing: 0.015625rem;
+  font-size: 1.5rem;
+  color: hsl(234, 12%, 34%);
+}
+
+.title-description {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.9375rem;
+  line-height: 140%;
+  letter-spacing: 0;
+  color: hsl(234, 12%, 34%);
+  max-inline-size: 55ch;
+  margin-inline: auto;
+}
+
+.card-wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: auto auto auto auto;
+  gap: 2rem;
+  justify-items: center;
+}
+.card-wrapper .card {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 0.5rem;
+  box-shadow: 0rem 0.9375rem 1.875rem -0.6875rem hsla(213, 47%, 67%, 0.5);
+  position: relative;
+  overflow: hidden;
+  width: 19.625rem;
+  height: 15.625rem;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.card-wrapper .card .card-border {
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  width: 100%;
+  height: 0.25rem;
+}
+.card-wrapper .card .card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+}
+.card-wrapper .card h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 1.25rem;
+  line-height: 135%;
+  letter-spacing: 0;
+  color: hsl(234, 12%, 34%);
+}
+.card-wrapper .card p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8125rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: hsl(212, 6%, 44%);
+}
+.card-wrapper .card img {
+  align-self: flex-end;
+}
+.card-wrapper :nth-child(1 of .card) .card-border {
+  background-color: hsl(180, 62%, 55%);
+}
+.card-wrapper :nth-child(2 of .card) .card-border {
+  background-color: hsl(0, 78%, 62%);
+}
+.card-wrapper :nth-child(3 of .card) .card-border {
+  background-color: hsl(34, 97%, 64%);
+}
+.card-wrapper :nth-child(4 of .card) .card-border {
+  background-color: hsl(212, 86%, 64%);
+}
+
+.attribution {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 0.8125rem;
+  line-height: 160%;
+  letter-spacing: 0;
+  color: hsl(234, 12%, 34%);
+  text-align: center;
+  color: hsl(228, 45%, 44%);
+}
+
+@media (min-width: 48rem) {
+  .title-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 2.25rem;
+    line-height: 140%;
+    letter-spacing: 0.015625rem;
+  }
+  .title-heavy {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 2.25rem;
+    line-height: 140%;
+    letter-spacing: 0.015625rem;
+  }
+  .card-wrapper {
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto auto;
+  }
+  .card-wrapper :nth-child(1 of .card) {
+    grid-column: auto/span 2;
+  }
+  .card-wrapper :nth-child(2 of .card) {
+    justify-self: end;
+  }
+  .card-wrapper :nth-child(3 of .card) {
+    justify-self: start;
+  }
+  .card-wrapper :nth-child(4 of .card) {
+    grid-column: auto/span 2;
+  }
+}
+@media (min-width: 90rem) {
+  .card-wrapper {
+    grid-template-columns: 1fr auto 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
+  }
+  .card-wrapper .card {
+    width: 21.875rem;
+  }
+  .card-wrapper :nth-child(1 of .card) {
+    grid-column: auto/auto;
+    grid-row: auto/span 2;
+    align-self: center;
+    justify-self: end;
+  }
+  .card-wrapper :nth-child(2 of .card) {
+    justify-self: auto;
+  }
+  .card-wrapper :nth-child(3 of .card) {
+    justify-self: auto;
+  }
+  .card-wrapper :nth-child(4 of .card) {
+    grid-column: auto/auto;
+    grid-row: auto/span 2;
+    align-self: center;
+    justify-self: start;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */
